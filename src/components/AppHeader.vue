@@ -7,12 +7,12 @@ export default {
                 {
                     text: "HOME",
                     url: "#",
-                    current: false,
+                    current: true,
                 },
                 {
                     text: "SHOP",
                     url: "#",
-                    current: true,
+                    current: false,
                 },
                 {
                     text: "ABOUT",

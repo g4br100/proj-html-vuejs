@@ -66,7 +66,7 @@ export default {
                     excepturi veniam fuga repudiandae iusto vel, tempora alias laboriosam voluptatibus.</p>
             </div>
         </div> <!--tell us container end-->
-        <div class="we-start-container d-flex">
+        <div class="we-start-container">
             <div class="we-start-image">
                 <div>
                     <h1>We Start Baking</h1>
@@ -83,9 +83,9 @@ export default {
             </div>
             <div class="we-start-text">
                 <div>
-                    <h3>dont just take our word for it</h3>
+                    <h3 class="title-min">dont just take our word for it</h3>
                     <h5>"Finally found an alternative to the mass produced products.Something that incorporates real organic
-                        ingredients, nutrient dense wellness while promoting sustainability and activity"</h5>
+                        ingredients, nutrient dense wellness while promoting sustainability and activity."</h5>
                     <h6>Rachel Cooper, Founder</h6>
                 </div>
             </div>
@@ -106,11 +106,11 @@ export default {
         </div> <!--delivered container end-->
         <div class="location-container">
             <div class="location-title">
-                <h6>locations</h6>
-                <h1>Visit our Bakeries</h1>
+                <h6 class="title-min">locations</h6>
+                <h1 class="title-medium">Visit our Bakeries</h1>
             </div>
             <div class="location-image-container">
-                <div class="image-container-1">
+                <div class="image-container">
                     <img src="../assets/images/new-york-bk-1200x794.jpg" alt="New York Bakery">
                     <div class="newyork-container">
                         <div class="title">
@@ -131,7 +131,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="image-container-2">
+                <div class="image-container">
                     <img src="../assets/images/london-bk-1200x794.jpg" alt="">
                     <div class="london-container">
                         <div>
@@ -206,25 +206,34 @@ export default {
 .product-image-container {
     background-color: red;
     height: 50%;
+
+    img {
+        height: 100%;
+    }
 }
 
-.product-image-container img {
-    height: 100%;
-}
+.product-text {
 
-.product-text h1 {
-    color: rgb(85, 50, 139);
-}
+    h1 {
+        color: $secondary-color;
+    }
 
-.product-text button {
-    padding: 15px 25px;
-    border-radius: 7px;
-    border-style: none;
-    background-color: rgb(85, 50, 139);
-    color: white;
-    font-weight: bold;
-}
+    button {
+        padding: 15px 25px;
+        border-radius: 7px;
+        border-style: none;
+        background-color: $secondary-color;
+        color: white;
+        font-weight: bold;
+    }
 
+    p {
+        color: black;
+        line-height: 35px;
+        font-weight: 100;
+        margin: 20px 0;
+    }
+}
 
 .tell-us-container {
     background-image: url(../assets/images/bakery-process-1.jpg);
@@ -233,22 +242,23 @@ export default {
     width: 90vw;
     height: 70vh;
     margin: 5vh auto;
-}
 
-.tell-us-container div h1 {
-    padding: 100px;
-    color: white;
-    font-size: 4rem;
-    font-weight: bolder;
-    max-width: 900px;
-}
+    h1 {
+        padding: 100px;
+        color: white;
+        font-size: 4rem;
+        font-weight: bolder;
+        max-width: 900px;
+    }
 
-.tell-us-container div h2 {
-    padding: 100px;
-    color: white;
-    font-size: 7rem;
-    max-width: 900px;
-    font-weight: 100;
+    h2 {
+        float: right;
+        padding: 100px;
+        color: white;
+        font-size: 7rem;
+        max-width: 900px;
+        font-weight: 100;
+    }
 }
 
 .tell-us-text {
@@ -282,28 +292,53 @@ p {
 
 .we-start-image {
     background-image: url(../assets/images/bakery-process-2.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 45vw;
+    width: 44vw;
     height: 100%;
+
+    div {
+        padding: 0 50px;
+    }
+
+    h1 {
+        padding: 50px 0;
+        font-size: 4rem;
+    }
+
+    h2 {
+        padding-top: 20px;
+        margin-left: 80px;
+        font-size: 7rem;
+        font-weight: 100;
+    }
+
 }
 
 .we-start-text {
-    width: 45vw;
+    width: 44vw;
     height: 100%;
+
+    div {
+        width: 68%;
+        height: 70%;
+        margin: 100px auto;
+    }
+
+    h5 {
+        color: $secondary-color;
+        font-size: 30px;
+        line-height: 45px;
+        padding: 30px 0;
+    }
+
+    h6 {
+        font-weight: 300;
+    }
+
 }
 
-.we-start-image h1 {
-    padding: 50px;
-    font-size: 4rem;
-}
 
-.we-start-image h2 {
-    padding-top: 20px;
-    margin-left: 80px;
-    font-size: 7rem;
-    font-weight: 100;
-}
 
 .we-start-image-text {
     width: 400px;
@@ -311,20 +346,7 @@ p {
     margin-top: 250px;
 }
 
-.we-start-text div {
-    width: 70%;
-    height: 70%;
-    margin: 100px auto;
-}
 
-.we-start-text h5 {
-    color: rgb(85, 50, 139);
-    font-size: 2.75rem;
-}
-
-.we-start-text h6 {
-    font-weight: 300;
-}
 
 .delivered-container {
     background-image: url(../assets/images/bakery-process-3.jpg);
@@ -339,6 +361,18 @@ p {
     width: 85%;
     height: 20%;
     margin: 0 auto;
+
+    h1 {
+        font-size: 4rem;
+        padding-top: 50px;
+    }
+
+    h2 {
+        font-size: 7rem;
+        font-weight: 100;
+        padding-top: 20px;
+    }
+
 }
 
 .delivered-text {
@@ -348,16 +382,7 @@ p {
     margin-left: 120px;
 }
 
-.delivered-title h1 {
-    font-size: 4rem;
-    padding-top: 50px;
-}
 
-.delivered-title h2 {
-    font-size: 7rem;
-    font-weight: 100;
-    padding-top: 20px;
-}
 
 .location-container {
     width: 90vw;
@@ -370,17 +395,17 @@ p {
     height: 100px;
     margin: 0 auto;
     text-align: center;
-}
 
-.location-title h6 {
-    text-transform: uppercase;
-    color: rgb(85, 50, 139);
-    font-weight: 100;
-    font-size: 0.75rem;
-}
+    h6 {
+        text-transform: uppercase;
+        color: $secondary-color;
+        font-weight: 100;
+        font-size: 0.75rem;
+    }
 
-.location-title h1 {
-    color: rgb(85, 50, 139);
+    h1 {
+        color: $secondary-color;
+    }
 }
 
 .location-image-container {
@@ -388,15 +413,12 @@ p {
     min-height: 800px;
 }
 
-.image-container-1 {
+.image-container {
     width: calc(100% / 2);
     height: 500px;
 }
 
-.image-container-2 {
-    width: calc(100% / 2);
-    height: 500px;
-}
+
 
 .location-image-container img {
     width: 100%;
@@ -412,48 +434,47 @@ p {
     height: 200px;
 }
 
-.newyork-container h1 {
-    color: rgb(85, 50, 139);
-    text-align: center;
-    padding-top: 20px;
+.newyork-container,
+.london-container {
+
+    h1 {
+        color: $secondary-color;
+        text-align: center;
+        padding-top: 20px;
+    }
 }
 
-.london-container h1 {
-    color: rgb(85, 50, 139);
-    text-align: center;
-    padding-top: 20px;
-}
 
 .time-container {
     width: 90%;
     height: 100px;
     margin: 0 auto;
-}
 
-.time-container div {
-    width: calc(100% / 3);
-    height: 50px;
-    margin-top: 20px;
-}
+    div {
+        width: calc(100% / 3);
+        height: 50px;
+        margin-top: 20px;
+    }
 
-.time-container h6 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-}
+    h6 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
 
-.time-container h5 {
-    color: rgb(85, 50, 139);
-    font-size: 0.8rem;
-    text-align: center;
-    cursor: pointer;
+    h5 {
+        color: $secondary-color;
+        font-size: 0.8rem;
+        text-align: center;
+        cursor: pointer;
+    }
 }
 
 .cookie-container {
     align-items: center;
+    width: 100%;
+    height: 110vh;
 }
-
-
 
 .moments-image-container {
     display: flex;
@@ -475,21 +496,26 @@ p {
 
 .we-start-text {
     flex-direction: column;
-}
-
-.delivered-title,
-.product-container,
-.cookie-container,
-.we-start-text {
-    @include my-display-flex-1();
+    background-color: $third-color
 }
 
 .location-image-container,
 .cookie-image-container,
 .we-start-container,
-.time-container {
-    display: flex;
+.time-container,
+.location-image-container,
+.cookie-image-container,
+.we-start-container,
+.time-container,
+.delivered-title,
+.product-container,
+.cookie-container,
+.we-start-text,
+.tell-us-container div,
+.we-start-image div {
+    @include my-display-flex-1();
 }
+
 
 
 .site-main {
@@ -497,15 +523,23 @@ p {
     min-height: 800vh;
 }
 
-.cookie-container {
-    width: 100%;
-    height: 110vh;
-}
+
 
 .cookie-text {
     width: 30vw;
     height: 70vh;
     margin-left: 150px;
+
+    button {
+        padding: 15px 25px;
+        border-radius: 7px;
+        border-style: none;
+        background-color: $secondary-color;
+        color: white;
+        font-weight: bold;
+        margin-top: 50px;
+    }
+
 }
 
 .cookie-image-container {
@@ -522,15 +556,5 @@ p {
     font-size: 30px;
     line-height: 40px;
     color: $secondary-color;
-}
-
-.cookie-text button {
-    padding: 15px 25px;
-    border-radius: 7px;
-    border-style: none;
-    background-color: $secondary-color;
-    color: white;
-    font-weight: bold;
-    margin-top: 50px;
 }
 </style>
