@@ -1,6 +1,19 @@
 <script>
 export default {
     name: "AppMain",
+    data() {
+        return {
+            cards: [
+                {
+                    thumb: "../assets/images/choco-chip-cookies-1200x1530.jpg",
+                },
+                {
+                    thumb: "../assets/images//strawberry-jam-cookies-1200x1530.jpg",
+                }
+
+            ]
+        }
+    }
 };
 </script>
 
@@ -16,10 +29,10 @@ export default {
                 <button>Start Shopping</button>
             </div>
             <div class="cookie-image-container">
-                <div class="cookie-image-1">
+                <div>
                     <img src="../assets/images/choco-chip-cookies-1200x1530.jpg" alt="">
                 </div>
-                <div class="cookie-image-2">
+                <div>
                     <img src="../assets/images//strawberry-jam-cookies-1200x1530.jpg" alt="">
                 </div>
             </div>
@@ -90,12 +103,12 @@ export default {
                 </div>
             </div>
         </div> <!--we start container end-->
-        <div class="delivered-container">
-            <div class="delivered-title">
+        <div id="delivered-container">
+            <div id="delivered-title">
                 <h1>Delivered to your home</h1>
                 <h2>03</h2>
             </div>
-            <div class="delivered-text">
+            <div id="delivered-text">
                 <h3>baked to order & gift wrapped</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore et culpa! Laudantium
                     perspiciatis,
@@ -112,11 +125,11 @@ export default {
             <div class="location-image-container">
                 <div class="image-container">
                     <img src="../assets/images/new-york-bk-1200x794.jpg" alt="New York Bakery">
-                    <div class="newyork-container">
+                    <div id="newyork-container">
                         <div class="title">
                             <h1>New York</h1>
                         </div>
-                        <div class="time-container">
+                        <div id="time-container">
                             <div>
                                 <h6>call us</h6>
                                 <h6>1.800.458.556</h6>
@@ -133,7 +146,7 @@ export default {
                 </div>
                 <div class="image-container">
                     <img src="../assets/images/london-bk-1200x794.jpg" alt="">
-                    <div class="london-container">
+                    <div id="london-container">
                         <div>
                             <h1>London</h1>
                         </div>
@@ -160,6 +173,9 @@ export default {
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
+
+
+
 
 .moments-container {
     height: 110vh;
@@ -242,6 +258,7 @@ export default {
     width: 90vw;
     height: 70vh;
     margin: 5vh auto;
+
 
     h1 {
         padding: 100px;
@@ -341,14 +358,14 @@ p {
 
 
 .we-start-image-text {
-    width: 400px;
+    width: 540px;
     margin-left: 80px;
-    margin-top: 250px;
+    margin-top: 150px;
 }
 
 
 
-.delivered-container {
+#delivered-container {
     background-image: url(../assets/images/bakery-process-3.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -357,7 +374,7 @@ p {
     margin: 7vh auto;
 }
 
-.delivered-title {
+#delivered-title {
     width: 85%;
     height: 20%;
     margin: 0 auto;
@@ -375,7 +392,7 @@ p {
 
 }
 
-.delivered-text {
+#delivered-text {
     width: 30%;
     height: 30%;
     margin-top: 15%;
@@ -424,18 +441,19 @@ p {
     width: 100%;
 }
 
-.newyork-container {
-    width: 100%;
-    height: 200px;
+
+#newyork-container {
+    background-color: rgba(127, 249, 255, 0.151);
 }
 
-.london-container {
-    width: 100%;
-    height: 200px;
+#london-container {
+    background-color: rgba(255, 228, 196, 0.172);
 }
 
-.newyork-container,
-.london-container {
+#newyork-container,
+#london-container {
+    width: 100%;
+    height: 200px;
 
     h1 {
         color: $secondary-color;
@@ -445,7 +463,7 @@ p {
 }
 
 
-.time-container {
+#time-container {
     width: 90%;
     height: 100px;
     margin: 0 auto;
@@ -495,8 +513,7 @@ p {
 }
 
 .we-start-text {
-    flex-direction: column;
-    background-color: $third-color
+    background-color: $third-color;
 }
 
 .location-image-container,
@@ -507,20 +524,20 @@ p {
 .cookie-image-container,
 .we-start-container,
 .time-container,
-.delivered-title,
+#delivered-title,
 .product-container,
 .cookie-container,
 .we-start-text,
-.tell-us-container div,
-.we-start-image div {
+.tell-us-container div:first-of-type,
+.we-start-image div:first-of-type {
     @include my-display-flex-1();
 }
 
 
 
-.site-main {
+#site-main {
     width: 100%;
-    min-height: 800vh;
+    min-height: 700vh;
 }
 
 
@@ -546,10 +563,10 @@ p {
     width: 50vw;
     height: 70vh;
     margin-right: 150px;
-}
 
-.cookie-image-container img {
-    height: 70vh;
+    img {
+        height: 70vh;
+    }
 }
 
 .title-medium {

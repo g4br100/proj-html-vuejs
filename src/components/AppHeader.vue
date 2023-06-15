@@ -119,6 +119,7 @@ header {
 
     button {
         margin: 40px 0;
+        background-color: white;
     }
 }
 
@@ -154,10 +155,10 @@ header :first-child {
 
                 }
 
-                &:active,
                 &:hover {
                     color: $primary-color;
                     border-bottom: 5px solid $primary-color;
+                    background-color: #F2EFFA;
                 }
 
 
