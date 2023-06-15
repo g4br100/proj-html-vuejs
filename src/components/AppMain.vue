@@ -220,7 +220,6 @@ export default {
 }
 
 .product-image-container {
-    background-color: red;
     height: 50%;
 
     img {
@@ -463,7 +462,7 @@ p {
 }
 
 
-#time-container {
+.time-container {
     width: 90%;
     height: 100px;
     margin: 0 auto;
