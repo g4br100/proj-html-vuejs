@@ -129,7 +129,7 @@ export default {
                         <div class="title">
                             <h1>New York</h1>
                         </div>
-                        <div id="time-container">
+                        <div class="time-container">
                             <div>
                                 <h6>call us</h6>
                                 <h6>1.800.458.556</h6>
@@ -519,7 +519,6 @@ p {
 .location-image-container,
 .cookie-image-container,
 .we-start-container,
-.time-container,
 .location-image-container,
 .cookie-image-container,
 .we-start-container,
